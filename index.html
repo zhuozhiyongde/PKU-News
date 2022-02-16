@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PKU NEWS</title>
+    <script src="./js/vue.js"></script>
+    <script src="./js/axios.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="./ignoreFiles/fontawesome-pro-6.0.0-beta2/fontawesome-pro-6.0.0-beta2-web/css/all.css"
+    />
+  </head>
+  <body>
+    <div id="title">
+      <h1>PKU NEWS</h1>
+      <h2>by Arthals</h2>
+    </div>
+    <div id="content" class="content">
+      <div class="sortby sortByHot" id="sortByHot">
+        <div class="titleInfo">
+          <span class="info_icon info_icon-gold">
+            <i class="fas fa-chart-column"></i>
+          </span>
+          <h2>综合榜</h2>
+          <div class="periodSelectTool">
+            <span class="period day" @click="changePeriod($event,'Day')"
+              >日</span
+            >
+            <span class="period week" @click="changePeriod($event,'Week')"
+              >周</span
+            >
+            <span class="period month" @click="changePeriod($event,'Month')"
+              >月</span
+            >
+          </div>
+        </div>
+        <hole
+          v-for="(rank,index) in info"
+          :key="index"
+          :rank="index"
+          :serial="rank.pid"
+          :index="rank.hot"
+        ></hole>
+      </div>
+      <div class="sortby sortByReply" id="sortByReply">
+        <div class="titleInfo">
+          <span class="info_icon info_icon-blue">
+            <i class="far fa-comment-alt"></i>
+          </span>
+          <h2>回复榜</h2>
+          <div class="periodSelectTool">
+            <span class="period day" @click="changePeriod($event,'Day')"
+              >日</span
+            >
+            <span class="period week" @click="changePeriod($event,'Week')"
+              >周</span
+            >
+            <span class="period month" @click="changePeriod($event,'Month')"
+              >月</span
+            >
+          </div>
+        </div>
+        <hole
+          v-for="(rank,index) in info"
+          :key="index"
+          :rank="index"
+          :serial="rank.pid"
+          :index="rank.reply"
+        ></hole>
+      </div>
+      <div class="sortby sortByStar" id="sortByStar">
+        <div class="titleInfo">
+          <span class="info_icon info_icon-red">
+            <i class="far fa-star"></i>
+          </span>
+          <h2>关注榜</h2>
+          <div class="periodSelectTool">
+            <span class="period day" @click="changePeriod($event,'Day')"
+              >日</span
+            >
+            <span class="period week" @click="changePeriod($event,'Week')"
+              >周</span
+            >
+            <span class="period month" @click="changePeriod($event,'Month')"
+              >月</span
+            >
+          </div>
+        </div>
+        <hole
+          v-for="(rank,index) in info"
+          :key="index"
+          :rank="index"
+          :serial="rank.pid"
+          :index="rank.star"
+        ></hole>
+      </div>
+    </div>
+  </body>
+  <script src="./js/index.js"></script>
+</html>

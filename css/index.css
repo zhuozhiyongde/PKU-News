@@ -1,0 +1,122 @@
+/* Code by Arthals */
+@font-face {
+  font-family: "Quicksand";
+  src: url(../font/Quicksand-Light.ttf);
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(../font/Montserrat-Light.otf);
+}
+html,
+body {
+  background-color: #f8f8f8;
+}
+#title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#title h1 {
+  font-family: "Quicksand";
+  font-weight: 900;
+  margin-bottom: 0px;
+}
+#title h2 {
+  margin-top: 0px;
+  font-family: "Quicksand";
+  font-size: 23px;
+  margin-bottom: 0px;
+}
+#content {
+  width: 98vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+}
+.sortby {
+  /* -webkit-animation: popUp ease-in-out 350ms;
+      animation: popUp ease-in-out 350ms; */
+  background: #ffffff;
+  height: 400px;
+  border-radius: 25px;
+  box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.17);
+  margin-top: 40px;
+  padding: 30px;
+  position: relative;
+  width: 300px;
+}
+.titleInfo {
+  width: 100%;
+}
+.info_icon-gold i {
+  color: #eab100;
+}
+.info_icon-blue i {
+  color: #8faae8;
+}
+.info_icon-red i {
+  color: #ff86af;
+}
+
+h2 {
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.periodSelectTool {
+  margin-top: 10px;
+  float: right;
+}
+/* .periodSelectTool .selected {
+  border-bottom: 2px solid #8faae8;
+} */
+#hotPeriodSelected {
+  border-bottom: 2px solid #8faae8;
+}
+.hole {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-family: "Quicksand";
+}
+a.jumpLink {
+  text-decoration: none;
+  color: #000;
+}
+.hole .serial {
+  font-family: "Montserrat";
+}
+.hole:not(:last-child) {
+  margin-bottom: 10px;
+}
+.rank {
+  font-weight: 900;
+}
+.hole .rank {
+  width: 40px;
+  text-align: center;
+  color: #888;
+}
+#sortByHot .hole:nth-child(-n + 4) .rank {
+  color: #eab100 !important;
+}
+
+#sortByReply .hole:nth-child(-n + 4) .rank {
+  color: #8faae8 !important;
+}
+#sortByStar .hole:nth-child(-n + 4) .rank {
+  color: #ff86af !important;
+}
+
+@media screen and (max-width: 1100px) {
+  .content {
+    margin-top: 350px;
+    flex-direction: column;
+  }
+  .sortby {
+    margin: 20px auto;
+    width: 250px;
+  }
+}
