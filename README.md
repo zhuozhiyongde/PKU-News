@@ -16,8 +16,6 @@
 4. 依照各项指标，分别整理出每天/周/月的各项指标前十条，汇总至页面中。
 * 热度 = 回复 * 2 + 关注 * 3
 
-本项目稍后将完全开源于Github：https://github.com/zhuozhiyongde/PKU-News
-
 如有任何改进意见、想法或者技术交流（信科大佬快来指导指导我这个小菜鸡吧！），欢迎提请issue/PR。
 
 
@@ -33,3 +31,5 @@ PKU News，你的树洞冲浪好帮手！
 项目回顾：https://www.arthals.ink/?p=95
 
 本项目将完全开源于Github：https://github.com/zhuozhiyongde/PKU-News
+
+受学校影响，本项目不再更新。有关数据已被移除。域名闲置，未来放什么不一定= =
